@@ -1,17 +1,20 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const port = 3000;
+const path = require("path");
+app.use(express.static(path.join(__dirname, "public"))); 
+require('dotenv').config()
+const db = require('./model/database');
+const cerveja = require("./model/cerveja");
 
+const port = 3000;
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-  res.send("Hello World");
+app.get("/", async (req, res) => {  
+    //const cervejas = await cerveja.findAll();  
+    res.render("index");
 });
 
-app.get("/index", (req, res) => {
-  res.render("../views/index");
-});
 
-app.listen(port, () =>
-  console.log(`Servidor rodando em http://localhost:${port}`)
-);
+db.conectado();
+app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
