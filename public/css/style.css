@@ -6,7 +6,7 @@
   
   html,
   body {
-    background: linear-gradient(0deg, rgb(255, 159, 159) 0%, rgb(255, 68, 68) 100% );
+    background: linear-gradient(0deg, rgb(233, 245, 69) 0%, rgb(255, 236, 68) 100% );
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -40,7 +40,7 @@
   
   nav ul li a {
     text-decoration: none;
-    color: rgb(68, 105, 255);
+    color: rgb(11, 11, 14);
     font-weight: bold;
     font-size: 1.2rem;
     transition: 0.5s;
@@ -282,7 +282,7 @@ section#detalhes div#infos div#info-detalhes {
 }
 
 section#detalhes div#infos h2 {
-  background-color: rgb(255, 47, 47);
+  background-color: rgb(15, 11, 11);
   padding: 1rem;
   color: #fff;
   border-radius: 1rem;
@@ -314,7 +314,12 @@ section#cadastrar {
 
 section#cadastrar form div label {
   font-size: 1.3rem;
-  color: rgb(255, 0, 0);
+  color: rgb(8, 7, 7);
+}
+
+section#excluir form div label {
+  font-size: 1.3rem;
+  color: rgb(8, 7, 7);
 }
 
 section#cadastrar form div input {
@@ -328,9 +333,9 @@ section#cadastrar form div input {
 }
 
 section#cadastrar form button {
-  border: 1px solid rgb(255, 68, 68);
+  border: 1px solid rgb(800, 89, 108);
   background-color: #fff;
-  color: rgb(255, 68, 68);
+  color: rgb(12, 9, 9);
   padding: 1rem;
   font-size: 0.8vw;
   font-weight: 600;
@@ -342,3 +347,20 @@ section#cadastrar form button {
   transition: 0.3s ease-out;
   width: 40%;
 }
+
+section#excluir form button {
+  border: 1px solid rgb(800, 89, 108);
+  background-color: #fff;
+  color: rgb(12, 9, 9);
+  padding: 1rem;
+  font-size: 0.8vw;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  display: block;
+  margin: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  width: 40%;
+}
+

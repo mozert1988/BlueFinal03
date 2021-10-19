@@ -6,54 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Pokedex | Detalhes</title>
+    <title>Artesanal | Detalhes</title>
 </head>
 
 <body>
     <nav>
-        <img src="/img/logo/logo-pokedex.png" class="img-fluid gif" alt="logo pokedex">
+        <img src="/img/logo/logo.png" class="img-fluid gif" alt="logo pokedex">
         <ul>
             <li>
-                <a href="/home">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
-                <a href="/cadastro">Cadastro</a>
+                <a href="/cervejarias">Cervejarias</a>
+            </li>
+            <li>
+                <a href="/cadastro-cerveja">Cadastro Cerveja</a>
+            </li>
+            <li>
+                <a href="/cadastro-cervejaria">Cadastro Cervejaria</a>
             </li>
         </ul>
     </nav>
 
+
     <header>
-        <h1> <%= pokemon.nome %>
-            <span style="font-weight: 200;"  > Nº <%= pokemon.numero %></span>
-        </h1>
+        <h1> <%= cerveja.nome %></h1>        
     </header>
 
     <section id= "detalhes">
-        <img src="<%= pokemon.imagem %>" alt="pokemon">
+        <img src="<%= cerveja.imagem %>" height="500" alt="cerveja">
         <div id="infos">
             <p> 
-                <%= pokemon.descricao %>
+                <%= cerveja.descricao %>
             </p>
             <div id="info-detalhes">
                 <div class="col">
-                    <h4>Altura: </h4>
-                    <h3><%= pokemon.altura %></h3>
-                    <h4>Peso: </h4>
-                    <h3><%= pokemon.peso %></h3>
+                    <h4>Teor Alcoolico: </h4>
+                    <h3><%= cerveja.teor_alcoolico %></h3>
+                    <h4>Tipo Cerveja: </h4>
+                    <h3><%= cerveja.tipocerveja_id%></h3>
+                    <h4>Cervejaria: </h4>
+                    <h3><%= cerveja.cervejaria_id%></h3>
                 </div>
-                <div class="col">
-                    <h4>Categoria: </h4>
-                    <h3><%= pokemon.categoria %></h3>
-                    <h4>Habilidade: </h4>
-                    <h3><%= pokemon.habilidade %></h3>
-                </div>
-               
+                              
             </div>
             <br />
-            <h3>Tipo</h3>
-            <h2><%= pokemon.tipo %></h2>
-
-
+            <a href="/cervejadelete/<%=cerveja.id%>">Excluir</a>
+            <a href="/cervejaedit/<%=cerveja.id%>">Editar</a>
         </div>
     </section>
 </body>

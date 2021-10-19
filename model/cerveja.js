@@ -18,6 +18,8 @@ const cerveja = database.sequelize.define("cerveja", {
     type: Sequelize.STRING,
     allowNull: false,
   },
+  tipocerveja_id: Sequelize.INTEGER,
+  cervejaria_id: Sequelize.INTEGER,
 },
 {
   freezeTableName: true,

@@ -30,16 +30,16 @@
 
     <header>
         <article>
-            <h1> Artesanal </h1>
+            <h1> Cervejarias </h1>
         </article>        
     </header>
-    
+
     <section id="pokemon">
-        <% cervejas.forEach(item => { %>
+        <% cervejaria.forEach(item => { %>
             <a class="card" href="/detalhes/<%= item.id %>">
-                <img src="<%= item.imagem %>" alt="">
+                <img src="<%= item.logo %>" alt="">
                 <h2><%= item.nome %></h2>
-                <h4><%= item.tipocerveja %></h4>
+                <h4><%= item.pais %></h4>
             </a>
         <% }) %> 
     </section>

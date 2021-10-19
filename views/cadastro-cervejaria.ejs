@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Pokedex | Cadastro</title>
+</head>
+
+<body>
+    <nav>
+        <img src="/img/logo/logo.png" class="img-fluid gif" alt="logo pokedex">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/cervejarias">Cervejarias</a>
+            </li>
+            <li>
+                <a href="/cadastro-cerveja">Cadastro Cerveja</a>
+            </li>
+            <li>
+                <a href="/cadastro-cervejaria">Cadastro Cervejaria</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <header>
+        <h1> Cadastrar Cervejaria </h1>
+    </header>
+    <section id="cadastrar">
+        <form action="/cervejarianew" method="POST" >
+           
+            <div>
+                <label for="nome">Nome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome">
+            </div>
+            <div>
+                <label for="historia">Historia</label>
+                <input type="text" name="historia" id="historia" placeholder= "Digite o historia" required>
+            </div>
+            <div>
+                <label for="pais">pais</label>
+                <input type="text" name="pais" id="imagem" placeholder="Digite o pais da cervejaria" required>
+            </div>
+            <div>
+                <label for="logo">logo</label>
+                <input type="text" name="logo" id="logo" placeholder="Insira o link da imagem com a logo da cervejaria " required>
+            </div>
+                       
+           
+            <button type="submit">Cadastrar</button>
+        </form>
+        <script>
+            
+        </script>
+    </section>
+</body>
+</html>
