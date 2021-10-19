@@ -8,7 +8,7 @@ const cerveja = require("./model/cerveja");
 const cervejaria = require("./model/cervejaria");
 const tipoCerveja = require("./model/tipoCerveja");
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
@@ -49,25 +49,25 @@ app.get("/cervejadelete/:cervejaid", async (req, res) => {
     res.redirect("/");
 });
 
-app.get("/cervejaedit/:cervejaid", async (req,res) => {
-    const cervejaed = await cerveja.findByPk(req.params.id);
-    res.render("../views/cervejaedit", {cerveja: cerveja});
-});
+//app.get("/cervejariaedit/:cervejaid", async (req,res) => {
+//    const cervejaed = await cerveja.findByPk(req.params.id);
+//    res.render("../views/cervejaedit", {cerveja: cerveja});
+//});
 
-app.post("/cervejaedit/cervejaid", async (req,res) => {
-    const cervejaedi = await cerveja.findByPk(req.params.id);
-    const { nome, descricao, teor, imagem, tipo, cervejaria } = req.body;
+//app.post("/cervejaedit/cervejaid", async (req,res) => {
+//    const cervejaedi = await cerveja.findByPk(req.params.id);
+//    const{ nome, descricao, teor, imagem, tipo, cervejaria } = req.body;
     
-       nome: nome, 
-       descricao: descricao,
-       teor_alcoolico; teor,
-       imagem; imagem,
-       tipocerveja_id; tipo,
-       cervejaria_id; cervejaria
-
-    await cerveja.save();
-    res.redirect("/cadastro-cerveja");
-});
+//     nome: nome, 
+//       descricao: descricao,
+//       teor_alcoolico; teor,
+//       imagem; imagem,
+//      tipocerveja_id; tipo,
+//      cervejaria_id; cervejaria
+//
+//    await cerveja.save();
+//   res.redirect("/cadastro-cerveja");
+//});
 
 app.post("/cervejarianew", async (req, res) => {
     const {nome, historia, pais, logo} = req.body;

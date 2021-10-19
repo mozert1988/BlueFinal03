@@ -223,7 +223,7 @@
     justify-content: center;
     cursor: pointer;
     transition: transform 0.5s;
-    background-color: #fff;
+    background-color: rgb(233, 232, 240);
     color: #000;
     text-decoration: none;
 }
