@@ -113,5 +113,5 @@ tipoCerveja.hasMany(cerveja, {
   foreignKey: 'tipocerveja_id'
 });
 
-db.conectado();
+
 app.listen(port, () => console.log(`Servidor rodando em http://localhost:${port}`));
